@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For My Shubhi ❤️</title>
+    <style>
+        :root {
+            --primary: #c2185b; /* Deep Rose */
+            --secondary: #fce4ec; /* Light Blush */
+            --accent: #880e4f; /* Maroon-ish Pink */
+            --text: #4a148c; /* Dark Purple-ish Text */
+        }
+        body { font-family: 'Segoe UI', Arial, sans-serif; background-color: var(--secondary); color: var(--text); text-align: center; padding: 20px; margin: 0; }
+        .container { max-width: 500px; margin: 20px auto; background: white; padding: 25px; border-radius: 20px; box-shadow: 0 10px 30px rgba(194, 24, 91, 0.2); border: 2px solid #f8bbd0; }
+        img { max-width: 100%; border-radius: 12px; margin-top: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+        button { background-color: var(--primary); color: white; border: none; padding: 14px 28px; border-radius: 30px; cursor: pointer; font-size: 16px; font-weight: bold; margin: 15px 0; transition: transform 0.2s, background 0.3s; width: 100%; }
+        button:hover { background-color: var(--accent); transform: scale(1.02); }
+        .hidden { display: none; }
+        .menu-item { background: #fff5f8; border: 1.5px solid #f8bbd0; margin: 12px 0; padding: 15px; border-radius: 15px; cursor: pointer; transition: 0.3s; }
+        .menu-item:hover { background: #fce4ec; border-color: var(--primary); }
+        .menu-item h3 { margin: 0; color: var(--primary); font-size: 1.1em; }
+        .gallery img { margin-top: 10px; border: 2px solid #f8bbd0; }
+        .final-msg { font-size: 1.2em; line-height: 1.7; color: var(--accent); font-weight: 500; background: #fff0f5; padding: 20px; border-radius: 15px; border-left: 5px solid var(--primary); }
+        a { color: var(--primary); text-decoration: none; font-weight: bold; display: block; margin-top: 10px; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div id="page1">
+        <img src="1000225569.jpg" alt="Login Portal">
+        <button onclick="showPage('page2')">Login</button>
+    </div>
+
+    <div id="page2" class="hidden">
+        <h1 style="color: var(--primary);">Happy Valentine Shubhi</h1>
+        <p style="font-style: italic;">"Blue lillies they are"</p>
+        <img src="1770959065249.jpeg" alt="Blue Lilies">
+        <button onclick="showPage('page3')">Next</button>
+    </div>
+
+    <div id="page3" class="hidden">
+        <div class="menu-item" onclick="toggleSection('journey')">
+            <h3>1st heading : Our journey till now</h3>
+            <div id="journey" class="hidden gallery">
+                <img src="1000225595.jpg">
+                <img src="1000225620.jpg">
+                <img src="1000225623.jpg">
+                <img src="1000225621.jpg">
+                <img src="1000225622.jpg">
+            </div>
+        </div>
+
+        <div class="menu-item" onclick="toggleSection('favorites')">
+            <h3>2nd heading : Few of my Favorites</h3>
+            <div id="favorites" class="hidden gallery">
+                <p><em>" I couldnt access the hrms photo 🤧"</em></p>
+                <img src="1000225630.jpg">
+                <img src="1000225624.jpg">
+                <img src="1000225628.jpg">
+            </div>
+        </div>
+
+        <div class="menu-item">
+            <h3>3rd heading : Song for you</h3>
+            <a href="https://open.spotify.com/track/44AyOl4qVkzS48vBsbNXaC?si=Rqz8q6mUT-eTlVTFS6Lqag" target="_blank">🎵 Click to Listen on Spotify</a>
+        </div>
+
+        <button onclick="showPage('page4')">Final Submit</button>
+    </div>
+
+    <div id="page4" class="hidden">
+        <div class="final-msg">
+            I love you and will always do, I am always here and always will be , so dont overthink and live happily and keep smiling Baccha,<br><br>
+            <strong>P.S. : I bath daily almost 🧼</strong>
+        </div>
+    </div>
+</div>
+
+<script>
+    function showPage(pageId) {
+        document.querySelectorAll('.container > div').forEach(div => div.classList.add('hidden'));
+        document.getElementById(pageId).classList.remove('hidden');
+        window.scrollTo(0,0);
+    }
+
+    function toggleSection(id) {
+        const el = document.getElementById(id);
+        el.classList.toggle('hidden');
+    }
+</script>
+
+</body>
+</html>
